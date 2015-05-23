@@ -99,7 +99,7 @@ class Konwersja
     	elseif($this->jednostka1=="TB" && $this->jednostka2=="TB")	
     		return $this->dana;
     	else{
-    		$this->jednostka="nieobslugiwane jednostki";
+    		return	$this->jednostka="nieobslugiwane jednostki";
     	}
     }
 }
