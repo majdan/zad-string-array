@@ -46,8 +46,60 @@ class Konwersja
     }
 
 
-    public function test()
+    public function conv()
     {
-        return $this->dana;
+    	if($this->jednostka1=="B" && $this->jednostka2=="kB")	
+    		return $this->dana /1024;
+    	elseif($this->jednostka1=="B" && $this->jednostka2=="B")	
+    		return $this->dana;
+    	elseif($this->jednostka1=="B" && $this->jednostka2=="MB")	
+    		return $this->dana/(1024*1024);
+    	elseif($this->jednostka1=="B" && $this->jednostka2=="GB")	
+    		return $this->dana/(1024*1024*1024);
+    	elseif($this->jednostka1=="B" && $this->jednostka2=="TB")	
+    		return $this->dana/(1024*1024*1024*1024);
+    	elseif($this->jednostka1=="kB" && $this->jednostka2=="B")	
+    		return $this->dana*1024;
+    	elseif($this->jednostka1=="kB" && $this->jednostka2=="kB")	
+    		return $this->dana;
+    	elseif($this->jednostka1=="kB" && $this->jednostka2=="MB")	
+    		return $this->dana/1024;
+    	elseif($this->jednostka1=="kB" && $this->jednostka2=="GB")	
+    		return $this->dana/(1024*1024);
+    	elseif($this->jednostka1=="kB" && $this->jednostka2=="TB")	
+    		return $this->dana/(1024*1024*1024);
+    	elseif($this->jednostka1=="MB" && $this->jednostka2=="B")	
+    		return $this->dana*(1024*1024);
+    	elseif($this->jednostka1=="MB" && $this->jednostka2=="kB")	
+    		return $this->dana*1024;
+    	elseif($this->jednostka1=="MB" && $this->jednostka2=="GB")	
+    		return $this->dana/1024;
+    	elseif($this->jednostka1=="MB" && $this->jednostka2=="TB")	
+    		return $this->dana/(1024*1024);
+    	elseif($this->jednostka1=="MB" && $this->jednostka2=="MB")	
+    		return $this->dana;
+    	elseif($this->jednostka1=="GB" && $this->jednostka2=="B")	
+    		return $this->dana*(1024*1024*1024);
+    	elseif($this->jednostka1=="GB" && $this->jednostka2=="kB")	
+    		return $this->dana*(1024*1024);
+    	elseif($this->jednostka1=="GB" && $this->jednostka2=="MB")	
+    		return $this->dana*1024;
+    	elseif($this->jednostka1=="GB" && $this->jednostka2=="TB")	
+    		return $this->dana/1024;
+    	elseif($this->jednostka1=="GB" && $this->jednostka2=="GB")	
+    		return $this->dana;
+    	elseif($this->jednostka1=="TB" && $this->jednostka2=="B")	
+    		return $this->dana*(1024*1024*1024*1024);
+    	elseif($this->jednostka1=="TB" && $this->jednostka2=="kB")	
+    		return $this->dana*(1024*1024*1024);
+    	elseif($this->jednostka1=="TB" && $this->jednostka2=="MB")	
+    		return $this->dana*(1024*1024);
+    	elseif($this->jednostka1=="TB" && $this->jednostka2=="GB")	
+    		return $this->dana*1024;
+    	elseif($this->jednostka1=="TB" && $this->jednostka2=="TB")	
+    		return $this->dana;
+    	else{
+    		$this->jednostka="nieobslugiwane jednostki";
+    	}
     }
 }

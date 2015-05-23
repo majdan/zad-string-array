@@ -14,13 +14,17 @@ class KonwersjaSpec extends ObjectBehavior
 
     function it_should_have_setter_and_gettter()
     {
-        $this->setDana(123)->getDana()->shouldReturn(123);
+        $this->setDana(999999999999)->getDana()->shouldReturn(999999999999);
         $this->setJednostka1("lorem")->getJednostka1()->shouldReturn("lorem");    
         $this->setJednostka2("lore")->getJednostka2()->shouldReturn("lore");  
     }
 
-    function it_should_test()
+    function it_should_conv()
 	{
-  	  $this->setDana(5)->test()->shouldReturn(5);
+  	  $this->setDana(1)
+  	  	   ->setJednostka1("kB")
+  	  	   ->setJednostka2("B")
+  	  	   ->conv()
+  	  	   ->shouldReturn(1024);
 	}
 }
